@@ -4,7 +4,7 @@ def line(deli)
   if deli.empty?
     puts "The line is currently empty."
   else
-    line_list = deli.map{ |customer| "#{deli.index(customer) + 1}. #{customer}"}
+    line_list = deli.map.with_index{ |customer, i| "#{i + 1}. #{customer}"}
     puts "The line is currently: #{line_list.join(" ")}"
   end
 end
